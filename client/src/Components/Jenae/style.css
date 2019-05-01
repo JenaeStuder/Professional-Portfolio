@@ -1,0 +1,17 @@
+/* font-family: 'Courgette', cursive;
+font-family: 'Sriracha', cursive;
+font-family: 'Delius', cursive; */
+
+
+#jenae{
+    font-family: 'Courgette', cursive;
+    font-size: 1000px;
+    background: -webkit-linear-gradient(70deg, rgb(199, 137, 166), rgb(227, 133, 145));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      margin-top: 2vh;
+      /* margin-left:0px;
+      margin-right: 0px;*/
+      padding-left: 15%;
+      align-content: center;
+}

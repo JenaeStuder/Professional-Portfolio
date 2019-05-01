@@ -1,0 +1,12 @@
+/* font-family: 'Courgette', cursive;
+font-family: 'Sriracha', cursive;
+font-family: 'Delius', cursive; */
+
+ body {
+    background-image: url("./assets/images/florals1.png");
+    background-size: 430px 400px;
+    background-position: right top; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image*/
+    margin-top: 2%; 
+ }
+   

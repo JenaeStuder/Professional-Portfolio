@@ -1,0 +1,29 @@
+/* font-family: 'Courgette', cursive;
+font-family: 'Sriracha', cursive;
+font-family: 'Delius', cursive; */
+
+
+
+
+#color{
+background-image: linear-gradient(70deg, rgb(199, 137, 166), rgb(227, 133, 145));
+background-repeat: no-repeat;
+color:white;
+border-radius:2%;
+box-shadow: 10px 10px 10px grey;
+margin-top: 20%;
+align-content: center;
+}
+.Title{
+    align-content: center;
+    
+
+}
+.Qualifications{
+    margin: 2%;
+    /* align-content: center; */
+}
+
+   
+
+
