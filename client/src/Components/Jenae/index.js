@@ -9,7 +9,7 @@ export default class Jenae extends Component {
     render(){
         return(
             <div id="jenae" >
-            <h1>Jenae Studer-Hart</h1>
+           <p> Jenae Studer-Hart</p>
             </div>
         )}}
                 

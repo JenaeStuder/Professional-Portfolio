@@ -9,18 +9,43 @@ font-family: 'Delius', cursive; */
 #root > div > div {
     z-index: 99999 !important;
   }
-  main {
+  /* main {
     padding-left: 300px;
+  } */
+  .Info-div{
+    margin-bottom: 0;
+    max-height: 10%;
+  }
+  #Name{
+    margin-top: 3vh;
+    margin-bottom: 0;
+  }
+  #Info{
+    margin-top: 3vh;
+    margin-bottom: 0;
+    max-height: 50%;
   }
   .btn{
     background-image: linear-gradient(70deg, rgb(199, 137, 166), rgb(227, 133, 145));
-background-repeat: no-repeat;
-color:white;
-box-shadow: 10px 10px 10px grey;
-margin-left: 5%;
+    background-repeat: no-repeat;
+    color:white;
+    box-shadow: 10px 10px 10px grey;
+    margin-left: 5%;
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    border-radius: 5%;
+    margin-top: 2vh;
   }
 
-  @media only screen and (max-width : 992px) {
+  .Footer{
+    margin-top: 0;
+    background-image: linear-gradient(70deg, rgb(199, 137, 166), rgb(227, 133, 145));
+    background-repeat: no-repeat;
+    color:white;
+  }
+
+  @media only screen and (max-width : 375px) {
      main{
       padding-left: 0;
     }

@@ -10,72 +10,105 @@ import Container from "react-bootstrap/Container";
 // import { Grid } from 'semantic-ui-react';
 // import { Button, Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
 // import '../semantic/dist/semantic.min.css'
-import { SideNav, SideNavItem, Button } from "react-materialize";
+import { SideNav, SideNavItem } from 'react-materialize';
+import { Button, Footer } from 'react-materialize';
+// import SideNav from "../../Components/SideNav";
+// import SideNavItem from "../../Components/SideNavItem";
 import Jenae from '../../Components/Jenae';
 
 
 
 
 
+
+
 class Home extends Component {
-    // 
+
     render() {
-        
+
         return (
             <div>
-                
-                <Button data-target="sidenav_0" class="btn show-on-large sidenav-trigger">MORE</Button>
-                <div style={{ position: 'absolute', width: '0px', height: '0px', visibility: 'hidden', display: 'none' }}>
-                <ul id="sidenav_0" class="sidenav" style={{transform: "translateX(0%)"}}><li class="">
-                    <div>
-                        <SideNav trigger={<Button />} options={{ closeOnClick: true }}>
-                            <SideNavItem userView user={{
-                                background: 'https://placeimg.com/640/480/tech',
-                                image: 'static/media/react-materialize-logo.824c6ea3.svg',
-                                name: 'John Doe',
 
-                            }} />
-                            <SideNavItem href="#!icon" icon="cloud">
-                                First Link With Icon
+                {/* <Button/>
+                 <Button waves data-target="sidenav_0" class="btn show-on-large sidenav-trigger">MORE</Button>
+                <div style={{ position: 'absolute', width: '0px', height: '0px',transform: "translateX(150%)"  }}>
+         <ul trigger={<Button/>} id="sidenav_0" class="sidenav" style={{transform: "translateX(0%)", visibility: 'visible'}}><li class="">  */}
+                <div>
+
+
+                    <SideNav trigger={<Button waves data-target="sidenav_0" class="btn show-on-large sidenav-trigger">MORE</Button>} options={{ closeOnClick: true, visibility: true }} id="sidenav_0" class="sidenav" style={{ transform: "translateX(-100%)", visibility: 'visible' }}>
+
+                        <SideNavItem userView user={{
+                            background: 'https://placeimg.com/640/480/tech',
+                            image: 'static/media/react-materialize-logo.824c6ea3.svg',
+                            name: 'Jenae Studer-Hart',
+
+                        }} />
+                        <SideNavItem waves href="https://www.linkedin.com/in/jenae-hart-a8a7029a/">
+                            LinkedIn
                             </SideNavItem>
-                            <SideNavItem href="#!second">
-                                Second Link
+                        <SideNavItem waves href="https://github.com/naeNae15232">
+                            Github
                             </SideNavItem>
-                            <SideNavItem divider />
-                            <SideNavItem subheader>
-                                Subheader
+                        <SideNavItem divider />
+                        <SideNavItem subheader>
+                            Subheader
                             </SideNavItem>
-                            <SideNavItem waves href="#!third">
-                                Third Link With Waves
+                        <SideNavItem waves href="#!third">
+                            Contact
                             </SideNavItem>
-                        </SideNav>
-                    </div>
-                    </li></ul>
+                        <SideNavItem waves href="#!third">
+                            Projects
+                            </SideNavItem>
+                    </SideNav>
+
                 </div>
-                <main>
-                <Jenae/>
+                {/* </li></ul>  
+                 </div>  */}
+
+                <Container>
+                    <Row id='Name'>
+                        <Col xs={2} md={2}></Col>
+                        <Col xs={8} md={8}>
+                            <Jenae />
+                        </Col>
+                        <Col xs={2} md={2}></Col>
+                    </Row>
                     <br />
                     <Row>
-                    <Col xs={1}></Col>
+                        <Col xs={1}></Col>
                         <Col xs={10} md={12}>
-                        <Row>
-                        <Col xs={12} md={4}>
-                            <ProfilePicture />
-                        </Col>
-                        <Col xs={12} md={5}>
-                            <Bio />
-                        </Col>
-                        <Col xs={0} md={2}></Col>
-                        </Row>
+                            <Row id='Info'>
+                                {/* <Col md={2}></Col> */}
+                                <Col xs={12} md={5}>
+                                    <ProfilePicture />
+                                </Col>
+                                <Col xs={12} md={6}>
+                                    <Bio />
+                                </Col>
+                                <Col xs={0} md={1}></Col>
+                            </Row>
                         </Col>
                         <Col xs={1}></Col>
-
                     </Row>
-                </main>
-                {/* </Container> */}
-              
-                </div>
-          
+
+                </Container>
+                <Footer
+  copyrights="copy 2019 Jenae Studer-Hart"
+  moreLinks={<a />}
+  links={<ul />}
+  className="Footer"
+>
+<h5 className="white-text">
+Footer Content
+</h5>
+{/* <p className="grey-text text-lighten-4">
+You can use rows and columns here to organize your footer content.
+</p> */}
+</Footer>
+
+            </div>
+
         )
     }
 }

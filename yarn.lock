@@ -2495,10 +2495,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-materialize@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-materialize/-/react-materialize-3.2.0.tgz#d8604b1d0acd828e0b5ea7d653b06e19914d63ec"
-  integrity sha512-GlMJFFi/2NCCYTYnUrd7VEc/3UFpq1C66hak3nKcLny6n2fngpp10GMoaAK09yN0/wSX2YBbvW+g1ejYaF+hHg==
+react-materialize@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-materialize/-/react-materialize-3.2.1.tgz#ea54b95516dd30384d5f04495af269a9175ad1e4"
+  integrity sha512-kQam6W+rfoVAuwbNfT83uc7nqwtgRh+4Nnyhge+tq5slzUVBykjWF7JxP1Ng22UTLxYDxrb9S1qctKbqq8T+0g==
   dependencies:
     classnames "^2.2.5"
     react "^16.8.5"

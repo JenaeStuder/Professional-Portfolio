@@ -9,16 +9,20 @@ export default class Bio extends Component {
     render(){
         return(
             <div id="color" >
-                
-                <Container>
                     <br/>
                     <Row className= 'Qualifications'>
+                    <Col xs={1}></Col>
+                    <Col xs={10}>
                     <h3 className='Title'>Full Stack Developer</h3>
+                    </Col>
+                    <Col xs={1}></Col>
+                    <br></br>
                     <Row>
-                        <Col xs={4}>
+                        <Col md={4}>
                     <ul>
-                        <li>JavaScript</li>
                         <li>Reactjs</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
                         <li>Node.js</li>
                         <li>MYSQL</li>
                         <li>Sequelize</li>
@@ -27,7 +31,7 @@ export default class Bio extends Component {
                         <li>Express</li>
                     </ul>
                     </Col>
-                    <Col xs={8}>
+                    <Col md={8}>
                     <ul>
                         <li>CSS</li>
                         <li>Bootstrap</li>
@@ -36,15 +40,12 @@ export default class Bio extends Component {
                         <li>Semantic-UI-React</li>
                         <li>SASS</li>
                         <li>HTML</li>
+                        <li>RESTful API</li>
                         <li>Github</li>
                         </ul>
                         </Col>
                     </Row>
                     </Row>
-                    </Container>
-                    
-
-              
             </div>
         )}
     };

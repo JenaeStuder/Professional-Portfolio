@@ -12,6 +12,7 @@ function ProfilePicture(){
      src={require("../../assets/images/n2tsadvuTKGxEwyC+IA5DQ_thumb_12dcf.jpg")} alt= "jenae"/>  
 
 
- )
-}
+)};
+
+
 export default ProfilePicture;
