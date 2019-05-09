@@ -5,5 +5,8 @@
     height: 30%;
     width: auto;
     border-radius: 50%;
-    box-shadow: 10px 10px 10px grey;
+    box-shadow: 5px 5px 5px grey;
+}
+img{
+    margin:0;
 }

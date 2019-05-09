@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./home.css";
+import "./Home.css";
 // import {Container} from "semantic-ui-react";
-import Bio from "../../Components/Bio";
-import ProfilePicture from "../../Components/ProfilePicture";
+import Bio from "../Components/Bio";
+import ProfilePicture from "../Components/ProfilePicture";
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -14,7 +14,8 @@ import { SideNav, SideNavItem } from 'react-materialize';
 import { Button, Footer } from 'react-materialize';
 // import SideNav from "../../Components/SideNav";
 // import SideNavItem from "../../Components/SideNavItem";
-import Jenae from '../../Components/Jenae';
+import Jenae from '../Components/Jenae';
+import About from '../Components/About';
 
 
 
@@ -40,7 +41,7 @@ class Home extends Component {
 
                         <SideNavItem userView user={{
                             background: 'https://placeimg.com/640/480/tech',
-                            image: 'static/media/react-materialize-logo.824c6ea3.svg',
+                            // image: 'static/media/react-materialize-logo.824c6ea3.svg',
                             name: 'Jenae Studer-Hart',
 
                         }} />
@@ -54,7 +55,7 @@ class Home extends Component {
                         <SideNavItem subheader>
                             Subheader
                             </SideNavItem>
-                        <SideNavItem waves href="#!third">
+                        <SideNavItem waves href="/Contact">
                             Contact
                             </SideNavItem>
                         <SideNavItem waves href="#!third">
@@ -90,28 +91,39 @@ class Home extends Component {
                             </Row>
                         </Col>
                         <Col xs={1}></Col>
+                        <Col xs={10} md={12}>
+                            <Row>
+                                <Col xs={1}></Col>
+                                <Col xs={10}>
+                                    <About />
+                                </Col>
+                                <Col xs={1}></Col>
+                            </Row>
+                        </Col>
+                        <Col xs={0} md={1}></Col>
                     </Row>
-
                 </Container>
                 <Footer
-  copyrights="copy 2019 Jenae Studer-Hart"
-  moreLinks={<a />}
-  links={<ul />}
-  className="Footer"
->
-<h5 className="white-text">
-Footer Content
+                    copyrights="copy 2019 Jenae Studer-Hart"
+                    moreLinks={<a />}
+                    links={<ul />}
+                    className="Footer"
+                >
+                    <h5 className="white-text">
+                    Created in Reactjs
 </h5>
-{/* <p className="grey-text text-lighten-4">
-You can use rows and columns here to organize your footer content.
-</p> */}
-</Footer>
+                    <p className="grey-text text-lighten-4">
+                   
+</p>
+                </Footer>
 
             </div>
 
         )
     }
-}
+
+};
+
 
 
 export default Home;
