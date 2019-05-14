@@ -2,8 +2,8 @@
     margin-top: 15%; 
     margin-left: 5%; 
     /* margin-bottom: -150%; */
-    height: 45vh;
-    width: auto;
+    max-height: 45vh;
+    min-width: auto;
     border-radius: 50%;
     box-shadow: 5px 5px 5px grey;
 }

@@ -29,6 +29,7 @@ export default class Bio extends Component {
                         <li>Mongo</li>
                         <li>Mongoose</li>
                         <li>Express</li>
+                        <li>FireBase</li>
                     </ul>
                     </Col>
                     <Col md={8}>
@@ -42,6 +43,7 @@ export default class Bio extends Component {
                         <li>HTML</li>
                         <li>RESTful API</li>
                         <li>Github</li>
+                        <li>Heroku</li>
                         </ul>
                         </Col>
                     </Row>
