@@ -1,0 +1,34 @@
+.Links{
+    font-family: 'Sriracha', cursive;
+    font-size: 1.7em;
+    align-content: center;
+    color:rgb(199, 137, 166);
+   
+}
+.Links:hover{
+    color:rgb(131, 61, 110);
+}
+.Heading{
+    align-content: center;
+    font-size: 1.4em;
+    font-family: 'Sriracha', cursive;
+    color:rgb(204, 139, 154);
+
+}
+.space
+{
+    margin-top:2%;
+}
+.Text{
+    color:rgb(131, 61, 110);
+}
+.Texts{
+    color:rgb(131, 61, 110);
+}
+.Texts:hover{
+    /* color:rgb(237, 175, 101); */
+    color:rgb(204, 139, 154);
+}
+.Lists{
+    color:rgb(131, 61, 110);
+}

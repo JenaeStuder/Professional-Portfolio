@@ -45,7 +45,7 @@ class Home extends Component {
                             name: 'Jenae Studer-Hart',
 
                         }} />
-                        <SideNavItem waves href="https://www.linkedin.com/in/jenae-hart-a8a7029a/">
+                        <SideNavItem waves href="https://www.linkedin.com/in/jenae-studer-a8a7029a/">
                             LinkedIn
                             </SideNavItem>
                         <SideNavItem waves href="https://github.com/naeNae15232">
@@ -58,7 +58,7 @@ class Home extends Component {
                         <SideNavItem waves href="/Contact">
                             Contact
                             </SideNavItem>
-                        <SideNavItem waves href="#!third">
+                        <SideNavItem waves href="/Projects">
                             Projects
                             </SideNavItem>
                     </SideNav>
@@ -67,7 +67,7 @@ class Home extends Component {
                 {/* </li></ul>  
                  </div>  */}
 
-                <Container>
+                <Container className='Container'>
                     <Row id='Name'>
                         <Col xs={2} md={2}></Col>
                         <Col xs={8} md={8}>

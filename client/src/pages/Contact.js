@@ -66,12 +66,12 @@ class Contact extends Component {
                         <SideNavItem waves href="/">
                             Home
                        </SideNavItem>
-                        <SideNavItem waves href="#!third">
+                        <SideNavItem waves href="/Projects">
                             Projects
                         </SideNavItem>
                     </SideNav>
                 </div>
-                <Container>
+                <Container className='Container'>
                     <Row id='Name'>
                         <Col xs={2} md={2}></Col>
                         <Col xs={8} md={8}>
