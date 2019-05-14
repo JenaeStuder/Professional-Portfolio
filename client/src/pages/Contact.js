@@ -8,7 +8,7 @@ import Jenae from '../Components/Jenae';
 import axios from 'axios';
 
 
-const API_PATH = 'http://localhost:3000/react-contact-form/api/index.php';
+const API_PATH = 'https://localhost:3000/react-contact-form/api/index.php';
 
 class Contact extends Component {
     constructor(props) {
