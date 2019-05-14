@@ -1,4 +1,4 @@
-# JavaScript Standard Style Guide: http://standardjs.com
+# JavaScript Standard Style Guide: https://standardjs.com
 # https://github.com/feross/eslint-config-standard-react
 extends:
   - standard-react
