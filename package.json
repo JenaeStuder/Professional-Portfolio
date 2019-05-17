@@ -30,7 +30,7 @@
     "extends": "react-app"
   },
   "proxy": "https://localhost:3001",
-  "homepage": "http://myname.github.io/myapp",
+  "homepage": "https://naeNae15232.github.io/Professional-Portfolio",
   "browserslist": [
     ">0.2%",
     "not dead",
