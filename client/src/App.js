@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
-import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
 class App extends Component {
