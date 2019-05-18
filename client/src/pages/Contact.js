@@ -53,22 +53,24 @@ class Contact extends Component {
                             name: 'Jenae Studer-Hart',
 
                         }} />
-                        <SideNavItem waves href="https://www.linkedin.com/in/jenae-studer-a8a7029a/">
-                            LinkedIn
-                         </SideNavItem>
-                        <SideNavItem waves href="https://github.com/naeNae15232">
-                            Github
-                        </SideNavItem>
-                        <SideNavItem divider />
-                        <SideNavItem subheader>
-                            Subheader
-                       </SideNavItem>
                         <SideNavItem waves href="/">
                             Home
                        </SideNavItem>
                         <SideNavItem waves href="/Projects">
                             Projects
                         </SideNavItem>
+                        <SideNavItem divider />
+                        <SideNavItem subheader>
+                           Check Me Out On
+                       </SideNavItem>
+                        <SideNavItem waves href="https://www.linkedin.com/in/jenae-studer-a8a7029a/">
+                            LinkedIn
+                         </SideNavItem>
+                        <SideNavItem waves href="https://github.com/naeNae15232">
+                            Github
+                        </SideNavItem>
+                        
+                        
                     </SideNav>
                 </div>
                 <Container className='Container'>
@@ -123,9 +125,12 @@ class Contact extends Component {
 
                     className="Footer"
                 >
-                    <h5 className="white-text">
-                        All the pretty things you see were created with Reactjs, React-Materialize and React-Bootstrap.
-                    </h5>
+                                  {/* <h5 className="white-text">
+                    Created in Reactjs
+</h5> */}
+                    <p className="grey-text text-lighten-4">
+                   
+</p>
                     {/* <p className="grey-text text-lighten-4">
         You can use rows and columns here to organize your footer content.
         </p> */}

@@ -40,27 +40,31 @@ class Home extends Component {
                     <SideNav trigger={<Button waves data-target="sidenav_0" class="btn show-on-large sidenav-trigger">MORE</Button>} options={{ closeOnClick: true, visibility: true }} id="sidenav_0" class="sidenav" style={{ transform: "translateX(-100%)", visibility: 'visible' }}>
 
                         <SideNavItem userView user={{
-                            background: 'https://placeimg.com/640/480/tech',
+                            background:
+                             'https://placeimg.com/640/480/tech',
                             // image: 'static/media/react-materialize-logo.824c6ea3.svg',
                             name: 'Jenae Studer-Hart',
 
                         }} />
+                        <SideNavItem waves href="/Contact">
+                            Contact
+                            </SideNavItem>
+                            <SideNavItem waves href="/Projects">
+                            Projects
+                            </SideNavItem>
+                            <SideNavItem divider />
+                        <SideNavItem subheader>
+                            Check Me Out On
+                            </SideNavItem>
                         <SideNavItem waves href="https://www.linkedin.com/in/jenae-studer-a8a7029a/">
                             LinkedIn
                             </SideNavItem>
                         <SideNavItem waves href="https://github.com/naeNae15232">
                             Github
                             </SideNavItem>
-                        <SideNavItem divider />
-                        <SideNavItem subheader>
-                            Subheader
-                            </SideNavItem>
-                        <SideNavItem waves href="/Contact">
-                            Contact
-                            </SideNavItem>
-                        <SideNavItem waves href="/Projects">
-                            Projects
-                            </SideNavItem>
+                        
+                        
+                       
                     </SideNav>
 
                 </div>
@@ -109,9 +113,9 @@ class Home extends Component {
                     links={<ul />}
                     className="Footer"
                 >
-                    <h5 className="white-text">
+                    {/* <h5 className="white-text">
                     Created in Reactjs
-</h5>
+</h5> */}
                     <p className="grey-text text-lighten-4">
                    
 </p>

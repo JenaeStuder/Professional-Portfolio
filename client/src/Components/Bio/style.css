@@ -19,18 +19,19 @@ margin-top: 10%;
 margin-bottom: 0;
 align-content: center;
 max-width: 40em;
+min-width: 10em;
 }
 .Title{
     font-family: 'Fjalla One', sans-serif;
-    font-size: 30px;
+    font-size: 1.8em;
 }h3{
     align-content: center;
 }
 
-.Qualifications{
+/* .Qualifications{
     /* margin: 2%; */
-    /* align-content: center; */
-}
+    /* align-content: center; 
+} */
 
    
 

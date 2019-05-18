@@ -16,27 +16,29 @@ class Projects extends Component {
                     <SideNav trigger={<Button waves data-target="sidenav_0" class="btn show-on-large sidenav-trigger">MORE</Button>} options={{ closeOnClick: true, visibility: true }} id="sidenav_0" class="sidenav" style={{ transform: "translateX(-100%)", visibility: 'visible' }}>
 
                         <SideNavItem userView user={{
-                            background: 'https://placeimg.com/640/480/tech',
-                            // image: 'static/media/react-materialize-logo.824c6ea3.svg',
+                             background:
+                             'https://placeimg.com/640/480/tech',
                             name: 'Jenae Studer-Hart',
 
                         }} />
-                        <SideNavItem waves href="https://www.linkedin.com/in/jenae-studer-a8a7029a/">
-                            LinkedIn
-                         </SideNavItem>
-                        <SideNavItem waves href="https://github.com/naeNae15232">
-                            Github
-                        </SideNavItem>
-                        <SideNavItem divider />
-                        <SideNavItem subheader>
-                            Subheader
-                       </SideNavItem>
                         <SideNavItem waves href="/">
                             Home
                        </SideNavItem>
                         <SideNavItem waves href="/Contact">
                             Contact
                         </SideNavItem>
+                        <SideNavItem divider />
+                        <SideNavItem subheader>
+                           Check Me Out On
+                       </SideNavItem>
+                        <SideNavItem waves href="https://www.linkedin.com/in/jenae-studer-a8a7029a/">
+                            LinkedIn
+                         </SideNavItem>
+                        <SideNavItem waves href="https://github.com/naeNae15232">
+                            Github
+                        </SideNavItem>
+                       
+                        
                     </SideNav>
                 </div>
                 <Container className='Container'>
@@ -51,24 +53,55 @@ class Projects extends Component {
                     <Row>
                         <Col xs={1}></Col>
                         <Col xs={10}>
-                        <h2 className='Text'>Here is a quick peek at a few examples of my MERN stack creations</h2>
+                        <h3 className='Text'>Here is a quick peek at a few of my MERN stack creations.</h3>
                         </Col>
-                        <Col xs={1}></Col>
+                        <Col xs={1}>
+                        </Col>
                     </Row>
                     <Row>
-                        <Col xs={4}>
+                        <Col xs={3}>
+                        <a className='Links' id='Portfolios' href='https://jenaestuder.com'>My Portfolio</a>
+                        <br/>
+                        <Row className="space">
+                            <Col xs={1}></Col>
+                            <Col xs={12}>
+                        <p className='Heading'>Created Using:</p>
+                        </Col>
+                        <Col xs={1}></Col> 
+                        </Row>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={12}>
+                        <ul className="Lists">
+                            <li>React</li>
+                            <li>React-Materialize</li>
+                            <li>React-Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                            <li>PHP</li>
+                            <li>HTML</li>
+                           
+
+                        </ul>
+                        </Col>
+                            <Col xs={1}></Col>
+                            </Row>
+                        </Col>
+                        
+                      
+                        <Col xs={3}>
                         <a className="Links" id='Vans' href="https://ancient-escarpment-24807.herokuapp.com/">Van's Memory Game</a>
                         <br></br>
                         <Row className="space">
                             <Col xs={1}></Col>
-                            <Col xs={10}>
+                            <Col xs={12}>
                         <p className='Heading'>Created Using:</p>
                         </Col>
                         <Col xs={1}></Col>
                         </Row>
                         <Row>
                             <Col xs={1}></Col>
-                            <Col xs={10}>
+                            <Col xs={12}>
                         <ul className="Lists">
                             <li>React</li>
                             <li>React-Bootstrap</li>
@@ -80,19 +113,19 @@ class Projects extends Component {
                             <Col xs={1}></Col>
                             </Row>
                         </Col>
-                        <Col xs={4}>
-                        <a className="Links" id='Path' href='https://off-the-beaten-path.herokuapp.com/'>Off the Beaten Path</a>
+                        <Col xs={3}>
+                        <a className="Links" id='Path' href='https://off-the-beaten-path.herokuapp.com/' >Off the Beaten Path</a>
                         <br></br>
                         <Row className="space">
-                            <Col xs={1}></Col>
-                            <Col xs={10}>
+                            {/* <Col xs={1}></Col> */}
+                            <Col xs={12}>
                         <p className='Heading'>Created Using:</p>
                         </Col>
-                        <Col xs={1}></Col>
+                        {/* <Col xs={1}></Col> */}
                         </Row>
                         <Row>
-                            <Col xs={1}></Col>
-                            <Col xs={10}>
+                            {/* <Col xs={1}></Col> */}
+                            <Col xs={12}>
                         <ul className="Lists">
                         <li>MYSQL</li>
                         <li>Sequelize</li>
@@ -106,21 +139,21 @@ class Projects extends Component {
                         <li>Backstretch</li>
                          </ul>
                          </Col>
-                            <Col xs={1}></Col>
+                            {/* <Col xs={1}></Col> */}
                             </Row>
                         </Col>
-                        <Col xs={4}>
+                        <Col xs={3}>
                         <a className="Links" id='GOT' href='https://groodymoloko.github.io/gameofthrones/'> Game of Thrones Portal</a>
                         <br></br>
                         <Row className="space">
-                            <Col xs={1}></Col>
-                            <Col xs={10}>
+                            {/* <Col xs={1}></Col> */}
+                            <Col xs={12}>
                         <p className='Heading'>Created Using:</p>
                         </Col>
-                        <Col xs={1}></Col>
+                        {/* <Col xs={1}></Col> */}
                         </Row>
                         <Row>
-                            <Col xs={1}></Col>
+                            {/* <Col xs={1}></Col> */}
                             <Col xs={10}>
                         <ul className="Lists">
                             <li>JavaScript</li>
@@ -133,15 +166,15 @@ class Projects extends Component {
                             <li>Bootstrap</li>
                             </ul>
                             </Col>
-                            <Col xs={1}></Col>
+                            {/* <Col xs={1}></Col> */}
                             </Row>
                         </Col>
                     </Row>
                     <Row>
                         <Col xs={1}></Col>
                         <Col xs={10}>
-                        <h2 className='Text'>For a complete and always updated list please check out my
-                        <a className='Texts' href='https://github.com/naeNae15232?tab=repositories'> Github</a></h2>
+                        <h3 className='Text'>For a complete and always updated list please check out my
+                        <a className='Texts' href='https://github.com/naeNae15232?tab=repositories' alt='github link'> Github</a></h3>
                         </Col>
                         <Col xs={1}></Col>
                     </Row>
@@ -152,9 +185,9 @@ class Projects extends Component {
                     links={<ul />}
                     className="Footer"
                 >
-                    <h5 className="white-text">
+                    {/* <h5 className="white-text">
                     Created in Reactjs
-</h5>
+</h5> */}
                     <p className="grey-text text-lighten-4">
                    
 </p>

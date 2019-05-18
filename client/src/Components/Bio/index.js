@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import {Container} from "semantic-ui-react";
 // import Container from "react-bootstrap/Container";
-import {Container, Row, Col} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
 import "./style.css"
 
 export default class Bio extends Component {
@@ -13,9 +13,11 @@ export default class Bio extends Component {
                     <Row className= 'Qualifications'>
                     <Col xs={1}></Col>
                     <Col xs={10}>
-                    <h3 className='Title'>Full Stack Developer</h3>
+                    <h2 className='Title'>Full Stack Developer</h2>
                     </Col>
                     <Col xs={1}></Col>
+                    <br></br>
+                    <br></br>
                     <br></br>
                     <Row>
                         <Col md={4}>

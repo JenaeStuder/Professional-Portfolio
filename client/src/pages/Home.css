@@ -36,6 +36,7 @@ font-family: 'Delius', cursive; */
     font-size: 20px;
     border-radius: 5%;
     margin-top: 2vh;
+    font-family: 'Sriracha', cursive;
   }
 
   .Footer{
@@ -48,6 +49,7 @@ font-family: 'Delius', cursive; */
     bottom:0;
     left:0;
     right:0;
+    max-height: 8em;
   }
 
   @media only screen and (max-width : 375px) {

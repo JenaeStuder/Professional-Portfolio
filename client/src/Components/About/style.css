@@ -1,11 +1,23 @@
 .Facts{
-    background-image: linear-gradient(70deg, rgb(199, 137, 166), rgb(227, 133, 145));
+background-image: linear-gradient(70deg, rgb(199, 137, 166), rgb(227, 133, 145));
 background-repeat: no-repeat;
+font-family: 'Fjalla One', sans-serif;
 color:white;
-margin-top:-500;
-border-radius:2%;
+font-size: 20px;
+align-content: center;
+/* margin-top:-500; */
+border-radius: 2% 2%;
 box-shadow: 5px 5px 5px grey;
 width: 100%;
 height: auto;
-z-index: 5;
+min-width: 10em;
+/* margin-left:4%; */
+/* z-index: 5; */
+/* margin: 2%; */
+}
+.Fact{
+    font-family: 'Fjalla One', sans-serif;
+    align-content: center;
+    font-size: 3em; 
+    padding:2%;
 }
