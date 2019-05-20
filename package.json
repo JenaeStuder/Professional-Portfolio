@@ -14,7 +14,8 @@
     "node-iframe-replacement": "^1.0.0",
     "path": "^0.12.7",
     "react-bootstrap": "^1.0.0-beta.8",
-    "react-materialize": "^3.2.1"
+    "react-materialize": "^3.2.1",
+    "react-router-dom": "^5.0.0"
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -23,15 +24,14 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
-    "predeploy": "npm run build",
-    "deploy": "cd client && gh-pages -d build"
+    "heroku-postbuild": "npm run build"
+    
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "proxy": "https://localhost:3001",
-  "homepage": "https://naeNae15232.github.io/Professional-Portfolio",
+  
   "browserslist": [
     ">0.2%",
     "not dead",
