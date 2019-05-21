@@ -4,6 +4,7 @@ import { SideNav, SideNavItem, Button, Footer } from 'react-materialize';
 import { Col, Row, Container } from 'react-bootstrap';
 import Jenae from '../Components/Jenae';
 
+
 class Projects extends Component {
 
     render() {

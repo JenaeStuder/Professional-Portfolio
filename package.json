@@ -24,14 +24,15 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
-    
+    "heroku-postbuild": "npm run build",
+    "predeploy": "yarn run build",
+    "deploy": "cd client && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "proxy": "https://localhost:3001",
-  
+  "homepage" : "https://jenaestuder.com",
   "browserslist": [
     ">0.2%",
     "not dead",
