@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "947a125fdb0c9b4036ac",
-    "url": "/Professional-Portfolio/static/css/main.cba6dc52.chunk.css"
+    "revision": "32ab766878daa9edb3ae",
+    "url": "/Professional-Portfolio/static/css/main.fd98d17a.chunk.css"
   },
   {
-    "revision": "947a125fdb0c9b4036ac",
-    "url": "/Professional-Portfolio/static/js/main.4773844f.chunk.js"
+    "revision": "32ab766878daa9edb3ae",
+    "url": "/Professional-Portfolio/static/js/main.ee35f397.chunk.js"
   },
   {
     "revision": "34babc3f3a246ca638a0",
     "url": "/Professional-Portfolio/static/js/runtime~main.9af42896.js"
   },
   {
-    "revision": "51c625ffc777db74a891",
-    "url": "/Professional-Portfolio/static/js/2.719939ba.chunk.js"
+    "revision": "1b292097ce43363a759d",
+    "url": "/Professional-Portfolio/static/js/2.e8dc114f.chunk.js"
   },
   {
     "revision": "6a196d8d865211d89844e905733d42d4",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/Professional-Portfolio/static/media/florals1.0f62d93a.png"
   },
   {
-    "revision": "d85e6e5f006bacdf9329f06bc76c51f1",
+    "revision": "ce9a4bc2791fdba56a81a76151233e19",
     "url": "/Professional-Portfolio/index.html"
   }
 ];
