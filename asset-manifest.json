@@ -1,15 +1,15 @@
 {
-  "main.css": "/Professional-Portfolio/static/css/main.cba6dc52.chunk.css",
-  "main.js": "/Professional-Portfolio/static/js/main.3cc78e19.chunk.js",
-  "main.js.map": "/Professional-Portfolio/static/js/main.3cc78e19.chunk.js.map",
-  "runtime~main.js": "/Professional-Portfolio/static/js/runtime~main.9af42896.js",
-  "runtime~main.js.map": "/Professional-Portfolio/static/js/runtime~main.9af42896.js.map",
-  "static/js/2.719939ba.chunk.js": "/Professional-Portfolio/static/js/2.719939ba.chunk.js",
-  "static/js/2.719939ba.chunk.js.map": "/Professional-Portfolio/static/js/2.719939ba.chunk.js.map",
-  "index.html": "/Professional-Portfolio/index.html",
-  "precache-manifest.0717c50057958c3e9c3e0cf48354fab8.js": "/Professional-Portfolio/precache-manifest.0717c50057958c3e9c3e0cf48354fab8.js",
-  "service-worker.js": "/Professional-Portfolio/service-worker.js",
-  "static/css/main.cba6dc52.chunk.css.map": "/Professional-Portfolio/static/css/main.cba6dc52.chunk.css.map",
-  "static/media/App.css": "/Professional-Portfolio/static/media/florals1.0f62d93a.png",
-  "static/media/n2tsadvuTKGxEwyC+IA5DQ_thumb_12dcf.jpg": "/Professional-Portfolio/static/media/n2tsadvuTKGxEwyC+IA5DQ_thumb_12dcf.6a196d8d.jpg"
+  "main.css": "/static/css/main.755b9ebf.chunk.css",
+  "main.js": "/static/js/main.4d90440b.chunk.js",
+  "main.js.map": "/static/js/main.4d90440b.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.719939ba.chunk.js": "/static/js/2.719939ba.chunk.js",
+  "static/js/2.719939ba.chunk.js.map": "/static/js/2.719939ba.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.f7e6d9772835eb4b751faa578c25e5a0.js": "/precache-manifest.f7e6d9772835eb4b751faa578c25e5a0.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.755b9ebf.chunk.css.map": "/static/css/main.755b9ebf.chunk.css.map",
+  "static/media/App.css": "/static/media/florals1.0f62d93a.png",
+  "static/media/n2tsadvuTKGxEwyC+IA5DQ_thumb_12dcf.jpg": "/static/media/n2tsadvuTKGxEwyC+IA5DQ_thumb_12dcf.6a196d8d.jpg"
 }
