@@ -47,10 +47,10 @@ class Home extends Component {
                             name: 'Jenae Studer-Hart',
 
                         }} />
-                        <SideNavItem waves href="/Contact">
+                        <SideNavItem waves href="https://jenaestuder.com/#/Contact">
                             Contact
                             </SideNavItem>
-                            <SideNavItem waves href="/Projects">
+                            <SideNavItem waves href="https://jenaestuder.com/#/Projects">
                             Projects
                             </SideNavItem>
                             <SideNavItem divider />

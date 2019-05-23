@@ -56,7 +56,7 @@ class Contact extends Component {
                         <SideNavItem waves href="/">
                             Home
                        </SideNavItem>
-                        <SideNavItem waves href="/Projects">
+                        <SideNavItem waves href="https://jenaestuder.com/#/Projects">
                             Projects
                         </SideNavItem>
                         <SideNavItem divider />

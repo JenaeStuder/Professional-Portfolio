@@ -19,8 +19,8 @@ class App extends Component {
             <Link to='/Contact'>Contact</Link>
             <Link to='/Projects'>Projects</Link> */}
             <Route exact path="/" component={Home} />
-            <Route exact path="#/Contact" component={Contact} />
-            <Route exact path="#/Projects" component={Projects} />
+            <Route exact path="/Contact" component={Contact} />
+            <Route exact path="/Projects" component={Projects} />
           </Switch>
           </div>
           </HashRouter>  
