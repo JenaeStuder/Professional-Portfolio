@@ -8,5 +8,6 @@ font-family: 'Delius', cursive; */
     background-position: right top; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image*/
     margin-top: 2%; 
+    background-color: rgb(237, 220, 233, .4)
  }
    

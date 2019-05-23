@@ -37,6 +37,7 @@ font-family: 'Delius', cursive; */
     border-radius: 5%;
     margin-top: 2vh;
     font-family: 'Sriracha', cursive;
+    
   }
 
   .Footer{
@@ -61,5 +62,5 @@ font-family: 'Delius', cursive; */
     }
   } 
   .Container{
-    margin-bottom: 20%;
+    margin-bottom: 40%;
   }
