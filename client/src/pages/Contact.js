@@ -83,8 +83,8 @@ class Contact extends Component {
                     </Row>
                     <br></br>
                     <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
+                        <Col xs={0} md={1}></Col>
+                        <Col xs={12} md={10}>
                             <Card className='Card'>
                             <Row>
                             <Col xs={3}></Col>
@@ -112,7 +112,7 @@ class Contact extends Component {
 
                             </Card>
                         </Col>
-                        <Col xs={1}></Col>
+                        <Col xs={0} md={1}></Col>
                     </Row>
                 </Container>
                 <br></br>
