@@ -161,11 +161,11 @@ class Projects extends Component {
                             </Row>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className="End">
                         <Col xs={1}></Col>
                         <Col xs={10}>
                             <h3 className='Text'>For a complete and always updated list please check out my
-                        <a className='Texts' href='https://github.com/naeNae15232?tab=repositories' alt='github link'> Github</a></h3>
+                        <a className='Texts' href='https://github.com/naeNae15232?tab=repositories' alt='github link'> Github.</a></h3>
                         </Col>
                         <Col xs={1}></Col>
                     </Row>

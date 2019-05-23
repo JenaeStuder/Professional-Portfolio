@@ -98,11 +98,11 @@ class Home extends Component {
                         <Col xs={1}></Col>
                         <Col xs={10} md={12}>
                             <Row>
-                                <Col xs={1}></Col>
-                                <Col xs={10}>
+                                <Col xs={0} md={1}></Col>
+                                <Col xs={12} md={10}>
                                     <About />
                                 </Col>
-                                <Col xs={1}></Col>
+                                <Col xs={0} md={1}></Col>
                             </Row>
                         </Col>
                         <Col xs={0} md={1}></Col>
