@@ -93,7 +93,8 @@ class Contact extends Component {
                                 </Col>
                                 <Col xs={3}></Col>
                                 </Row>
-                                <form action="/action_page.php">
+                                <form action="https://formspree.io/pinksunflowers31@gmail.com" method="POST">
+                               
                                     <TextInput label="Name" id='name' value={this.state.name}
                                         onChange={e => this.setState({ name: e.target.value })} />
                                     <TextInput email validate label="Email" id='email' value={this.state.email}
