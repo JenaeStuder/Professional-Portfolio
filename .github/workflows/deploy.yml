@@ -25,8 +25,8 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -39,26 +39,42 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: master
           path: prod
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: develop
           path: staging
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version-file: prod/.nvmrc
+          node-version: 24
           cache: npm
           cache-dependency-path: |
             prod/package-lock.json
             staging/package-lock.json
 
+      # TEMPORARY bridge: until master contains the Next.js app, keep serving the
+      # existing 2019 site (gh-pages branch) at the root so the live site is
+      # untouched while develop is previewed at /staging/. Once master is
+      # merged this detects Next.js and the legacy steps never run.
+      - name: Detect whether master has the Next.js app
+        id: detect
+        run: |
+          if [ -f prod/next.config.ts ]; then echo "next=true" >> "$GITHUB_OUTPUT"; else echo "next=false" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/checkout@v6
+        if: steps.detect.outputs.next != 'true'
+        with:
+          ref: gh-pages
+          path: legacy
+
       # Production must build, or nothing deploys.
       - name: Build production (master)
+        if: steps.detect.outputs.next == 'true'
         working-directory: prod
         run: |
           npm ci
@@ -84,7 +100,13 @@ jobs:
       - name: Assemble site
         run: |
           mkdir site
-          cp -R prod/out/. site/
+          if [ "${{ steps.detect.outputs.next }}" = "true" ]; then
+            cp -R prod/out/. site/
+          else
+            echo "::notice::master is not on Next.js yet, serving the legacy gh-pages site at the root"
+            rm -rf legacy/.git
+            cp -R legacy/. site/
+          fi
           if [ "${{ steps.staging.outcome }}" = "success" ]; then
             mkdir site/staging
             cp -R staging/out/. site/staging/
@@ -92,7 +114,7 @@ jobs:
             echo "::warning::develop failed to build, deploying production only"
           fi
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
@@ -108,4 +130,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
