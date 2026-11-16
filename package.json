@@ -1,42 +1,30 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "professional-portfolio",
+  "version": "1.0.0",
   "private": true,
-  "main": "server.js",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "bootstrap": "^4.3.1",
-    "concurrently": "^4.1.0",
-    "express": "^4.16.4",
-    "gh-pages": "^2.0.1",
-    "gulp": "^4.0.1",
-    "materialize-css": "^1.0.0",
-    "node-iframe-replacement": "^1.0.0",
-    "path": "^0.12.7",
-    "react-bootstrap": "^1.0.0-beta.8",
-    "react-materialize": "^3.2.1",
-    "react-router-dom": "^5.0.0"
-  },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
-    "predeploy": "yarn run build",
-    "deploy": "cd client && gh-pages -d build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve out",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "deploy": "npm run build && gh-pages -d out --dotfiles"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
-  "proxy": "https://localhost:3001",
-  "homepage" : "https://jenaestuder.com",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
+  }
 }

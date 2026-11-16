@@ -1,29 +1,31 @@
-# Professional-Portfolio
+# Professional Portfolio
 
 https://jenaestuder.com
 
-## My portfolio was created using Reactjs, React-Bootstrap, React-Materialize, CSS, JavaScript, Node.js, Express and is hosting utilizing Github Pages with a React Router to allow it to be a single page application with the functionality of a multi-page application.
+Next.js (App Router, TypeScript) + Tailwind CSS, exported as a static site and hosted on GitHub Pages.
 
-### Home Page
-![Homepage](./client/public/images/homepage.png)
+## Develop
 
-### Home Page with React-Materialize SideNav Component that utilizes the React Router to move to other pages along with quick links to my Github and LinkedIn Pages.
-![Homepage with Nav](./client/public/images/homepagenav.png)
+```bash
+nvm use        # Node 22
+npm install
+npm run dev    # http://localhost:3000
+npm run lint && npm run typecheck
+```
 
-### Home Page in mobile for iPhone X
-![Homepage mobile](./client/public/images/homepagemobile.png)
+## Edit content
 
-### Projects Page displays a few links to my projects and also contains a link to my Github.
-![Projects](./client/public/images/projects.png)
+All copy (skills, projects, email, links) lives in [lib/content.ts](lib/content.ts).
 
-### Projects Page in mobile view for an iPhone X
-![Projects mobile](./client/public/images/projectsmobile.png)
+## Deploy (unchanged hosting: GitHub Pages, `gh-pages` branch)
 
-### Contact Page which utilizes the React-Materialize form component
-![Contact](./client/public/images/contact.png)
+```bash
+npm run deploy   # builds to ./out and publishes it to the gh-pages branch
+```
 
-### Contact Page in mobile view for an iPhone X
-![Contact Mobile](./client/public/images/contactmobile.png)
+`public/CNAME` is copied into `out/` so the custom domain survives each deploy.
 
-### React-Materialize Sidebar Nav in mobile view for an iPhone X
-![sidenav mobile](./client/public/images/mobilesidenav.png)
+## Accessibility
+
+Skip link, landmarks, one visible focus style, `prefers-reduced-motion` and `prefers-color-scheme` support.
+Palette tokens in [app/globals.css](app/globals.css) meet WCAG AAA (7:1) text contrast in light and dark.
