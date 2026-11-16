@@ -1,41 +1,100 @@
 name: Deploy to GitHub Pages
 
+# GitHub Pages serves one site per repo, so both environments ship together:
+#   master  -> https://jenaestuder.com/           (production)
+#   develop -> https://jenaestuder.com/staging/   (not-prod preview, noindex)
+# Every run rebuilds both branches and deploys them as a single artifact.
+
 on:
   push:
-    branches: [master]
+    branches: [master, develop]
   pull_request:
-    branches: [master]
+    branches: [master, develop]
   workflow_dispatch:
 
 permissions:
   contents: read
 
-# One deploy at a time; a newer push cancels a queued one but never an in-progress deploy.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  # Pull requests: prove lint, types and build are green. No deploy.
+  check:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: npm
-
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
 
-      # Only upload for the deploy job; PRs just prove the build is green.
-      - uses: actions/upload-pages-artifact@v3
-        if: github.event_name != 'pull_request'
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
         with:
-          path: out
+          ref: master
+          path: prod
+
+      - uses: actions/checkout@v4
+        with:
+          ref: develop
+          path: staging
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: prod/.nvmrc
+          cache: npm
+          cache-dependency-path: |
+            prod/package-lock.json
+            staging/package-lock.json
+
+      # Production must build, or nothing deploys.
+      - name: Build production (master)
+        working-directory: prod
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+
+      # A broken develop must never block production, so this step may fail;
+      # if it does, the site deploys without /staging/.
+      - name: Build staging (develop)
+        id: staging
+        continue-on-error: true
+        working-directory: staging
+        env:
+          BASE_PATH: /staging
+          NEXT_PUBLIC_ENV: staging
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+
+      - name: Assemble site
+        run: |
+          mkdir site
+          cp -R prod/out/. site/
+          if [ "${{ steps.staging.outcome }}" = "success" ]; then
+            mkdir site/staging
+            cp -R staging/out/. site/staging/
+          else
+            echo "::warning::develop failed to build, deploying production only"
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
 
   deploy:
     if: github.event_name != 'pull_request'

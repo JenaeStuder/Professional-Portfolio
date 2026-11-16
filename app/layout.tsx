@@ -5,7 +5,11 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
+const isStaging = process.env.NEXT_PUBLIC_ENV === "staging";
+
 export const metadata: Metadata = {
+  // Keep the not-prod copy out of search results.
+  robots: isStaging ? { index: false, follow: false } : undefined,
   metadataBase: new URL(site.url),
   title: `${site.name} · ${site.title}`,
   description: site.description,
@@ -27,6 +31,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to main content
         </a>
+        {isStaging && (
+          <div className="bg-accent px-6 py-2 text-center text-sm font-semibold text-on-accent">
+            Staging preview of the develop branch. Not the live site.
+          </div>
+        )}
         {children}
       </body>
     </html>
