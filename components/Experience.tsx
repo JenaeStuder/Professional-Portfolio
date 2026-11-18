@@ -1,12 +1,6 @@
-import { existsSync } from "node:fs";
-import { join } from "node:path";
-import { credentials, resumeFile, story } from "@/lib/content";
+import { story } from "@/lib/content";
+import { resume } from "@/lib/resume";
 import { Section } from "./Section";
-
-// Static export, so this runs at build time: the link only renders if the PDF
-// has actually been added to /public (no broken link on the live site).
-const hasResume = existsSync(join(process.cwd(), "public", resumeFile));
-const resumeHref = `${process.env.BASE_PATH ?? ""}/${resumeFile}`;
 
 export function Experience() {
   return (
@@ -23,25 +17,16 @@ export function Experience() {
       </div>
 
       <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-6">
-        {hasResume && (
+        {resume.available && (
           <a
-            href={resumeHref}
-            download
-            className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-on-accent shadow-lg shadow-accent/20 motion-safe:transition motion-safe:hover:-translate-y-0.5 hover:opacity-90"
+            href={resume.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
           >
-            Download my resume<span className="sr-only"> (PDF)</span>
+            View my resume<span className="sr-only"> (PDF, opens in a new tab)</span>
           </a>
         )}
-        <div>
-          <h3 className="mb-2 font-mono text-sm font-medium text-accent">
-            Education &amp; certifications
-          </h3>
-          <ul className="space-y-1 text-sm text-muted">
-            {credentials.map((c) => (
-              <li key={c}>{c}</li>
-            ))}
-          </ul>
-        </div>
       </div>
     </Section>
   );

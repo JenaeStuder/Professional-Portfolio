@@ -3,20 +3,19 @@
 
 export const site = {
   name: "Jenae Studer-Hart",
-  title: "Frontend Engineer",
+  title: "Senior Frontend Developer",
   url: "https://jenaestuder.com",
   location: "Gilbert, AZ · open to remote",
-  email: "jenaestuder11518@gmail.com",
   github: "https://github.com/JenaeStuder",
   linkedin: "https://www.linkedin.com/in/jenae-studer-a8a7029a/",
   description:
-    "Frontend engineer with 7 years of experience building accessible, responsive web applications in React, Next.js and TypeScript.",
+    "Senior frontend developer with 7 years of experience building scalable React, Next.js and TypeScript applications and design systems.",
 };
 
 export const intro = {
-  headline: "I build scalable web applications and design systems.",
+  headline: "I build scalable Next.js applications and design systems.",
   summary:
-    "Lead frontend developer with 7 years of experience building Next.js, React and TypeScript applications. I architect component libraries and design systems across platforms, have grown and led a team of developers, and drove our move to WCAG 2.2 AAA accessibility.",
+    "Senior frontend developer specializing in Next.js, with 7 years of experience building React and TypeScript applications. I architect component libraries and design systems across platforms, lead a team of developers, and drove our move to WCAG 2.2 AAA accessibility.",
   personal:
     "When I'm not keeping up with a field that reinvents itself every year, I can be found reading, catching a musical or a concert, or experimenting with new coffee drinks or cocktails.",
   now: "Right now I'm helping my Agile team adopt AI-assisted development with Claude Code.",
@@ -27,7 +26,7 @@ export type SkillGroup = { label: string; items: string[] };
 export const skills: SkillGroup[] = [
   {
     label: "Languages",
-    items: ["TypeScript", "JavaScript", "Semantic HTML", "CSS", "Sass"],
+    items: ["TypeScript", "JavaScript", "Semantic HTML", "CSS"],
   },
   {
     label: "Frameworks & UI",
@@ -61,11 +60,7 @@ export const skills: SkillGroup[] = [
     items: [
       "Git & GitHub",
       "GitHub Actions",
-      "Docker",
-      "Vite",
       "AWS (CDK, S3)",
-      "REST APIs",
-      "GA4 & GTM",
       "Claude Code",
     ],
   },
@@ -75,14 +70,8 @@ export const skills: SkillGroup[] = [
       "Design systems",
       "Responsive design",
       "Core Web Vitals",
-      "Technical SEO",
       "Code review",
-      "Agile",
     ],
-  },
-  {
-    label: "CMS & platforms",
-    items: ["Drupal (Site Studio, Twig)", "AEM", "WordPress"],
   },
 ];
 
@@ -155,22 +144,10 @@ export const professionalWork: WorkItem[] = [
     tags: ["shadcn/ui", "Tailwind CSS", "React", "TypeScript"],
   },
   {
-    title: "Cross-platform component libraries",
+    title: "Shared component libraries",
     summary:
-      "Architected global libraries across three platforms: React components embedded in Drupal, Drupal Site Studio / Twig, and an AEM library for email development.",
-    tags: ["React", "Drupal", "AEM", "Twig"],
-  },
-  {
-    title: "Email platform rewrite",
-    summary:
-      "Led a full rewrite of a product's codebase, replacing hand-coded tables with a component-based MJML + AEM system, and grew the team from 4 to 8 developers along the way.",
-    tags: ["MJML", "AEM", "Node.js", "TypeScript"],
-  },
-  {
-    title: "Motion and conference kiosks",
-    summary:
-      "Interactive effects with GSAP and Framer Motion, including SVG displacement-map animations, plus large-format touchscreen kiosk applications for international conferences.",
-    tags: ["GSAP", "Framer Motion", "SVG"],
+      "Architected component libraries shared across three platforms, so a component is built once, documented once and reused everywhere instead of being rebuilt for each site.",
+    tags: ["React", "Component architecture", "Design systems"],
   },
 ];
 
@@ -184,7 +161,7 @@ export const stats = [
 
 export const facts = [
   { term: "Now", detail: "Frontend developer" },
-  { term: "Focus", detail: "Next.js, design systems, accessibility" },
+  { term: "Focus", detail: "Next.js architecture, design systems, accessibility" },
   { term: "Stack", detail: "TypeScript · React · Tailwind CSS" },
   { term: "Exploring", detail: "AI-assisted development with Claude Code" },
 ];
@@ -200,7 +177,7 @@ export const story = {
     },
     {
       title: "Component libraries that scale",
-      body: "I build components once and reuse them everywhere. That includes a design system on shadcn/ui and Tailwind, and global component libraries I architected across three platforms: React inside Drupal, Drupal Site Studio and Twig, and AEM. I've also led a full rewrite of a product's codebase around reusable, component-based architecture, so builds stay consistent as the number of sites and developers grows.",
+      body: "I build components once and reuse them everywhere. That includes a design system on shadcn/ui and Tailwind, and component libraries I architected to be shared across three platforms. I've also led a full rewrite of a product's codebase around reusable, component-based architecture, so builds stay consistent as the number of sites and developers grows.",
     },
     {
       title: "Leading developers",
@@ -213,11 +190,6 @@ export const story = {
   ],
 };
 
-export const credentials = [
-  "Full Stack Web Development Boot Camp Certificate, University of Arizona (2019)",
-  "Acquia Certified Site Builder, Drupal (2019)",
-  "Veeva CLM Certification (2026)",
-];
-
-// Drop the PDF here (in /public) and the download link appears automatically.
-export const resumeFile = "Jenae-Studer-Hart-Resume.pdf";
+// Path inside /public. If the file is missing the download buttons simply don't render,
+// so a broken link can never ship.
+export const resumeFile = "pdf/Jenae-Studer-Hart-Resume-Web.pdf";

@@ -12,7 +12,7 @@ export function Hero() {
             id="hero-heading"
             className="rise rise-2 mt-5 text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl"
           >
-            I build <span className="gradient-text">scalable</span> web applications and
+            I build scalable <span className="gradient-text">Next.js</span> applications and
             design systems.
           </h1>
           <p className="rise rise-3 mt-7 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
@@ -24,13 +24,13 @@ export function Hero() {
           <div className="rise rise-3 mt-10 flex flex-wrap gap-4">
             <a
               href="#contact"
-              className="rounded-lg bg-accent px-6 py-3.5 font-semibold text-on-accent shadow-lg shadow-accent/20 motion-safe:transition motion-safe:hover:-translate-y-0.5 hover:opacity-90"
+              className="btn btn-primary"
             >
               Get in touch
             </a>
             <a
               href="#projects"
-              className="rounded-lg border border-ui px-6 py-3.5 font-semibold motion-safe:transition hover:bg-surface"
+              className="btn btn-outline"
             >
               See my work
             </a>

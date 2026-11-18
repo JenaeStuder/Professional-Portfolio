@@ -38,7 +38,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className="order-2 flex items-center gap-2 rounded-md border border-ui px-3 py-1.5 text-sm font-medium hover:bg-surface sm:order-3"
+      className="btn btn-outline btn-sm order-2 sm:order-3"
     >
       <svg
         aria-hidden="true"
