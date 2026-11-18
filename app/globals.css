@@ -16,8 +16,8 @@
   --on-accent: #0d0d1f;
   --accent2: #fda4af;
   --accent-hover: #c7d2fe;
-  --glow-a: 18%;
-  --glow-b: 14%;
+  --glow-a: 15%;
+  --glow-b: 12%;
   color-scheme: dark;
 }
 
@@ -30,7 +30,7 @@
   --ui: #6f6f90;
   --accent: #3730a3;
   --on-accent: #ffffff;
-  --accent2: #9f1239;
+  --accent2: #881337;
   --accent-hover: #312e81;
   --glow-a: 12%;
   --glow-b: 10%;
@@ -53,13 +53,65 @@
 
 html {
   scroll-behavior: smooth;
-  /* The header wraps to two rows on phones, so leave room for it. */
-  scroll-padding-top: 7.5rem;
+  /* Anchor jumps must clear the sticky header, which wraps to two or three rows below
+     1024px (measured: 161px at 360px wide, 135px at 390-430px, 109px at 640-1023px). */
+  scroll-padding-top: 11rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 390px) {
+  html {
+    scroll-padding-top: 9rem;
+  }
+}
+
+@media (min-width: 1024px) {
   html {
     scroll-padding-top: 5rem;
+  }
+}
+
+/* Header. Below 1024px it is a normal part of the page that slides in on scroll-up and out on
+   scroll-down (modes are set in Header.tsx). From 1024px up it is simply pinned to the top.
+   .header-slot reserves the header's space so the page never shifts when it becomes fixed. */
+.header-slot {
+  min-height: var(--header-h, 0px);
+}
+
+.site-header {
+  position: relative;
+}
+
+.site-header[data-mode="shown"],
+.site-header[data-mode="hidden"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.site-header[data-mode="hidden"] {
+  transform: translateY(-100%);
+}
+
+/* A soft shadow lifts the header off the content whenever it floats over the page. */
+.site-header[data-mode="shown"] {
+  box-shadow: 0 12px 28px -14px rgb(0 0 0 / 0.55);
+}
+
+.site-header[data-animate="true"] {
+  transition: transform 0.35s ease;
+}
+
+@media (min-width: 1024px) {
+  .header-slot {
+    display: contents; /* lets the header stick to the page, not to this wrapper */
+  }
+  .site-header,
+  .site-header[data-mode] {
+    position: sticky;
+    top: 0;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
@@ -75,7 +127,9 @@ body {
   border-radius: 2px;
 }
 
-/* Soft decorative color behind the hero. Purely visual (aria-hidden in markup). */
+/* Soft spotlights fixed behind the whole page. Purely visual (aria-hidden in markup).
+   Strengths (--glow-a/--glow-b) are the strongest values that keep every text color at
+   WCAG AAA (7:1) over the glow, measured from rendered pixels at 390/768/1280px wide. */
 .glow {
   background:
     radial-gradient(38rem 24rem at 12% 0%, color-mix(in oklab, var(--accent) var(--glow-a), transparent), transparent 70%),

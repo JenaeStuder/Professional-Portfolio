@@ -6,6 +6,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
+  // Inline the (tiny) CSS into the HTML so it is not a render-blocking request.
+  experimental: { inlineCss: true },
   basePath: process.env.BASE_PATH || undefined,
 };
 

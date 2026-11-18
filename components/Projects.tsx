@@ -4,14 +4,14 @@ import { Section } from "./Section";
 export function Projects() {
   return (
     <Section id="projects" eyebrow="02 / code" title="Selected projects">
-      <ul className="grid gap-6 md:grid-cols-2">
+      <ul className="grid gap-3 sm:gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
           <li key={p.title}>
             <article
               aria-labelledby={`project-${i}`}
-              className="flex h-full flex-col rounded-2xl border border-line border-l-4 border-l-accent2 bg-surface p-8 motion-safe:transition motion-safe:hover:-translate-y-1 motion-safe:focus-within:-translate-y-1 hover:border-accent focus-within:border-accent"
+              className="flex h-full flex-col rounded-2xl border border-line border-l-4 border-l-accent2 bg-surface p-5 sm:p-8 motion-safe:transition motion-safe:hover:-translate-y-1 motion-safe:focus-within:-translate-y-1 hover:border-accent focus-within:border-accent"
             >
-              <h3 id={`project-${i}`} className="text-2xl font-bold tracking-tight">
+              <h3 id={`project-${i}`} className="text-[1.35rem] font-bold tracking-tight sm:text-2xl">
                 {p.title}
               </h3>
               <p className="mt-3 leading-relaxed text-muted">{p.summary}</p>
@@ -40,7 +40,7 @@ export function Projects() {
           </li>
         ))}
       </ul>
-      <p className="mt-10 text-muted">
+      <p className="mt-5 text-muted sm:mt-10">
         More of my code is on{" "}
         <a
           href="https://github.com/JenaeStuder"

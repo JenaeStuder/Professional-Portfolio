@@ -5,11 +5,11 @@ import { Section } from "./Section";
 // because this work can't be linked or inspected.
 export function ProfessionalWork() {
   return (
-    <Section id="professional-work" eyebrow="04 / shipped" title="Professional work">
-      <p className="mb-8 max-w-2xl text-muted">
+    <Section id="professional-work" eyebrow="03 / shipped" title="Professional work">
+      <p className="mb-4 max-w-2xl text-muted sm:mb-8">
         Much of my professional work is proprietary, so it&apos;s described rather than linked.
       </p>
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
         {professionalWork.map((w, i) => (
           <li key={w.title}>
             <article

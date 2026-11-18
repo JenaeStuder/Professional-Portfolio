@@ -17,6 +17,8 @@ const isStaging = process.env.NEXT_PUBLIC_ENV === "staging";
 export const metadata: Metadata = {
   // Keep the not-prod copy out of search results.
   robots: isStaging ? { index: false, follow: false } : undefined,
+  // No canonical on staging: pointing a noindex page at the live one sends mixed signals.
+  alternates: isStaging ? undefined : { canonical: "/" },
   metadataBase: new URL(site.url),
   title: `${site.name} · ${site.title}`,
   description: site.description,

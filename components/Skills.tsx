@@ -5,9 +5,9 @@ import { Section } from "./Section";
 // a big-type statement of the core toolkit, then plain columns for the supporting skills.
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="01 / skills" title="What I work with">
+    <Section id="skills" eyebrow="04 / skills" title="What I work with">
       <h3 className="font-mono text-sm font-medium text-accent">Core toolkit</h3>
-      <ul className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
+      <ul className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-[1.35rem] font-bold leading-tight tracking-tight sm:text-3xl">
         {coreSkills.map((skill, i) => (
           <li key={skill}>
             {skill}
@@ -20,7 +20,7 @@ export function Skills() {
         ))}
       </ul>
 
-      <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-x-10 gap-y-6 sm:mt-16 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3">
         {skills.map((group) => {
           const items = group.items.filter((item) => !coreSkills.includes(item));
           if (items.length === 0) return null;

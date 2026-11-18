@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { emailAddress, gmailUrl, mailtoUrl, outlookUrl } from "@/lib/email";
 
-const secondary = "btn btn-outline";
+const secondary = "btn btn-outline w-full sm:w-auto";
 
 // Buttons, not links: the address is only assembled on click (see lib/email.ts).
 export function EmailActions() {
@@ -18,20 +18,20 @@ export function EmailActions() {
       await navigator.clipboard.writeText(emailAddress());
       setStatus("Email address copied to clipboard.");
     } catch {
-      setStatus("Couldn't copy automatically. Try one of the email options instead.");
+      setStatus("Couldn't copy. Try one of the email options.");
     }
     setTimeout(() => setStatus(""), 4000);
   }
 
   return (
     <>
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <button
           type="button"
           onClick={() => {
             window.location.href = mailtoUrl();
           }}
-          className="btn btn-primary"
+          className="btn btn-primary w-full sm:w-auto"
         >
           Email me
         </button>
@@ -45,7 +45,7 @@ export function EmailActions() {
           Copy email address
         </button>
       </div>
-      <p role="status" className="mt-3 min-h-6 text-sm text-muted">
+      <p role="status" className="mt-2 min-h-5 text-center text-sm text-muted sm:text-left">
         {status}
       </p>
     </>

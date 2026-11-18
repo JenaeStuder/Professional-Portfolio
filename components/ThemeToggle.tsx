@@ -38,7 +38,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className="btn btn-outline btn-sm order-2 sm:order-3"
+      className="btn btn-outline btn-sm order-2 lg:order-3"
     >
       <svg
         aria-hidden="true"
