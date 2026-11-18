@@ -10,7 +10,7 @@ export function Contact() {
       <div className="rounded-3xl border border-line bg-surface p-6 sm:p-12">
         <p className="max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
           I&apos;m open to senior frontend roles, especially work built on Next.js and design
-          systems, or leading a team of developers. Tell me a little about the role or project and
+          systems. Tell me a little about the role or project and
           I&apos;ll get back to you, or start with my resume.
         </p>
 
