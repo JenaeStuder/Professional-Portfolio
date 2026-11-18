@@ -1,20 +1,24 @@
+import { yearsOfExperience } from "./experience";
+
 // All site copy lives here so it can be edited without touching components.
 // Source: Frontend Engineer resume (Nov 2026).
+
+// Computed when the site is built (see lib/experience.ts and the scheduled rebuild in deploy.yml).
+const years = yearsOfExperience();
 
 export const site = {
   name: "Jenae Studer-Hart",
   title: "Senior Frontend Developer",
   url: "https://jenaestuder.com",
-  location: "Gilbert, AZ · open to remote",
+  // Non-breaking spaces keep "Gilbert, AZ" (and the dot after it) together when the line wraps.
+  location: "Gilbert,\u00A0AZ\u00A0· open to remote",
   github: "https://github.com/JenaeStuder",
   linkedin: "https://www.linkedin.com/in/jenae-studer-a8a7029a/",
-  description:
-    "Senior frontend developer with 7 years of experience building scalable React, Next.js and TypeScript applications and design systems.",
+  description: `Senior frontend developer with ${years} years of experience building scalable React, Next.js and TypeScript applications and design systems.`,
 };
 
 export const intro = {
-  summary:
-    "Senior frontend developer specializing in Next.js, with 7 years of experience building React and TypeScript applications. I build component libraries and design systems across platforms and drove the move to WCAG 2.2 AAA accessibility.",
+  summary: `Senior frontend developer with ${years} years of experience in React, Next.js and TypeScript, building accessible interfaces and the reusable components behind them.`,
   personal:
     "When I'm not keeping up with a field that reinvents itself every year, I can be found reading, catching a musical or a concert, drinking coffee, playing cozy video games, coloring with alcohol markers, or experimenting with cocktail recipes.",
 };
@@ -41,7 +45,7 @@ export const skills: SkillGroup[] = [
   },
   {
     label: "Accessibility & quality",
-    items: ["WCAG 2.2 AAA", "ARIA", "axe DevTools", "Lighthouse", "WAVE"],
+    items: ["WCAG 2.2", "ARIA", "axe DevTools", "Lighthouse", "WAVE"],
   },
   {
     label: "Tooling & infrastructure",
@@ -52,6 +56,8 @@ export const skills: SkillGroup[] = [
     items: ["Design systems", "Core Web Vitals"],
   },
 ];
+
+export const bookRecommenderUrl = "https://jenaestuder.github.io/recommendations-nextjs/";
 
 // Selected projects: only work with public code, so every card links to GitHub.
 // Shown as large type at the top of the Skills section, and left out of the
@@ -81,7 +87,7 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        href: "https://jenaestuder.github.io/recommendations-nextjs/",
+        href: bookRecommenderUrl,
         label: "Live site",
       },
       {
@@ -113,9 +119,9 @@ type WorkItem = {
 
 export const professionalWork: WorkItem[] = [
   {
-    title: "WCAG 2.2 AAA accessibility program",
+    title: "Accessibility program",
     summary:
-      "Took production sites from no formal accessibility process to WCAG 2.2 AAA conformance. Built the team's audit workflow and set remediation standards for ARIA, focus order and color contrast with design and UX.",
+      "Built the audit workflow and remediation standards (ARIA, focus order, color contrast) that took production sites from no formal accessibility process to WCAG 2.2 AA, with AAA criteria met where required.",
     tags: ["WCAG 2.2", "ARIA", "axe", "Lighthouse"],
   },
   {
@@ -133,7 +139,7 @@ export const professionalWork: WorkItem[] = [
 ];
 
 export const facts = [
-  { term: "Now", detail: "Lead frontend developer" },
+  { term: "Now", detail: "Senior frontend developer" },
   { term: "Focus", detail: "Next.js, design systems, accessibility" },
   { term: "Exploring", detail: "AI-assisted development with Claude Code" },
 ];
@@ -141,7 +147,7 @@ export const facts = [
 // The experience section is a short narrative, not a resume. Employer names are
 // deliberately left off the site; the downloadable resume carries those details.
 export const story = {
-  lead: "I'm a lead developer building Next.js applications and the component libraries behind them, delivered on time, within scope, and accessible to everyone.",
+  lead: "The constant through all of it: shipping on time, within scope, and accessible to everyone.",
   sections: [
     {
       title: "Next.js applications, from design to production",
@@ -152,12 +158,12 @@ export const story = {
       body: "I build components once and reuse them everywhere. That includes a design system on shadcn/ui and Tailwind, and I've designed, led and contributed to component libraries shared across three platforms. I've also led a full rewrite of a product's codebase around reusable, component-based architecture, so builds stay consistent as the number of sites and developers grows.",
     },
     {
-      title: "Leading developers",
-      body: "I've grown a team from four developers to eight, handling the hiring, training, code reviews and documentation and setting the code standards. I stay close to design, QA and back-end engineers so delivery stays on schedule and within scope, and I'm helping my team adopt AI-assisted development responsibly.",
+      title: "Team leadership",
+      body: "I grew a team from four developers to eight, handling the hiring, training, code reviews and documentation and setting the code standards. I stayed close to design, QA and back-end engineers so delivery stayed on schedule and within scope. These days I'm helping my team adopt AI-assisted development responsibly.",
     },
     {
       title: "Accessibility as a standard",
-      body: "Accessibility is part of how I build, not a late-stage fix. I led the move from no formal accessibility process to WCAG 2.2 AAA conformance, with an audit workflow built on axe, Lighthouse, WAVE and manual keyboard testing, and remediation standards agreed with design, UX and QA.",
+      body: "Accessibility is part of how I build, not a late-stage fix. I led the move from no formal accessibility process to WCAG 2.2 AA conformance across production sites, meeting AAA criteria where required, with an audit workflow built on axe, Lighthouse, WAVE and manual keyboard testing, and remediation standards agreed with design, UX and QA.",
     },
   ],
 };

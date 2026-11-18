@@ -36,6 +36,15 @@ Deploys run through GitHub Actions ([.github/workflows/deploy.yml](.github/workf
 Both branches build on every push and ship together as one GitHub Pages site. Pull requests run
 lint, typecheck and build without deploying. `public/CNAME` keeps the custom domain.
 
+### Years of experience and the footer year
+
+"7 years" (hero, search description) and the "Seven years…" heading are computed in
+[lib/experience.ts](lib/experience.ts) from a June 2019 start, so they go up each June. The footer
+year is baked in at build time and then corrected in the visitor's browser. Because the site is
+static, the prose only changes when it is rebuilt, so the deploy workflow also rebuilds monthly
+(GitHub pauses scheduled workflows after 60 days with no commits; re-enable it in the Actions tab if
+that happens). To change the start date, edit `START` in `lib/experience.ts`.
+
 ## Accessibility
 
 Skip link, landmarks, one visible focus style and `prefers-reduced-motion` support.

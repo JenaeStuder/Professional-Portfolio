@@ -1,10 +1,15 @@
 import { story } from "@/lib/content";
+import { yearsInWords, yearsOfExperience } from "@/lib/experience";
 import { resume } from "@/lib/resume";
 import { Section } from "./Section";
 
 export function Experience() {
   return (
-    <Section id="experience" eyebrow="01 / experience" title="Seven years, one team, growing scope">
+    <Section
+      id="experience"
+      eyebrow="01 / experience"
+      title={`${yearsInWords(yearsOfExperience())} years, one team, growing scope`}
+    >
       <p className="max-w-3xl text-lg leading-relaxed text-muted sm:text-2xl">{story.lead}</p>
 
       <div className="mt-7 divide-y divide-line border-y border-line sm:mt-14">

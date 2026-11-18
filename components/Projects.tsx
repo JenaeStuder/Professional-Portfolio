@@ -1,4 +1,5 @@
-import { projects } from "@/lib/content";
+import { projects, site } from "@/lib/content";
+import { ExternalLink } from "./ExternalLink";
 import { Section } from "./Section";
 
 export function Projects() {
@@ -28,14 +29,11 @@ export function Projects() {
               <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
                 {p.links.map((l) => (
                   <li key={l.href}>
-                    <a
-                      href={l.href}
-                      className="font-semibold text-accent underline decoration-2 underline-offset-4"
-                    >
+                    <ExternalLink href={l.href}>
                       {l.label}
                       <span aria-hidden="true"> →</span>
                       <span className="sr-only"> for {p.title}</span>
-                    </a>
+                    </ExternalLink>
                   </li>
                 ))}
               </ul>
@@ -44,14 +42,7 @@ export function Projects() {
         ))}
       </ul>
       <p className="mt-5 text-muted sm:mt-10">
-        More of my code is on{" "}
-        <a
-          href="https://github.com/JenaeStuder"
-          className="font-semibold text-accent underline underline-offset-4"
-        >
-          GitHub
-        </a>
-        .
+        More of my code is on <ExternalLink href={site.github}>GitHub</ExternalLink>.
       </p>
     </Section>
   );

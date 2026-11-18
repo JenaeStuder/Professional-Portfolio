@@ -1,9 +1,8 @@
 import { site } from "@/lib/content";
 import { resume } from "@/lib/resume";
 import { EmailActions } from "./EmailActions";
+import { ExternalLink } from "./ExternalLink";
 import { Section } from "./Section";
-
-const link = "font-semibold text-accent underline underline-offset-4";
 
 export function Contact() {
   return (
@@ -34,14 +33,10 @@ export function Contact() {
             </li>
           )}
           <li>
-            <a href={site.linkedin} className={link} target="_blank" rel="noopener noreferrer">
-              LinkedIn<span className="sr-only"> (opens in a new tab)</span>
-            </a>
+            <ExternalLink href={site.linkedin}>LinkedIn</ExternalLink>
           </li>
           <li>
-            <a href={site.github} className={link} target="_blank" rel="noopener noreferrer">
-              GitHub<span className="sr-only"> (opens in a new tab)</span>
-            </a>
+            <ExternalLink href={site.github}>GitHub</ExternalLink>
           </li>
         </ul>
       </div>
