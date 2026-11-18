@@ -1,31 +1,38 @@
 @import "tailwindcss";
 
-/* Palette: warm neutrals with a single deep-teal accent.
-   Every text pairing meets WCAG AAA (7:1) in both themes. */
+/* Palette "Studio". Dark is the default for everyone (it ignores the OS setting);
+   light is an opt-in the visitor chooses with the header toggle, applied through
+   <html data-theme="light">. Every text pairing meets WCAG AAA (7:1) in both
+   themes; --ui (borders of controls) meets 3:1. --accent2 is for borders,
+   highlights and large gradient text only. */
 :root {
-  --bg: #fafaf9;
-  --surface: #ffffff;
-  --fg: #1c1917;
-  --muted: #44403c;
-  --line: #d6d3d1;
-  --ui: #78716c;
-  --accent: #115e59;
-  --on-accent: #ffffff;
-  color-scheme: light;
+  --bg: #0d0d1f;
+  --surface: #17172e;
+  --fg: #f3f3ff;
+  --muted: #c9c9e6;
+  --line: #33335c;
+  --ui: #7878a8;
+  --accent: #a5b4fc;
+  --on-accent: #0d0d1f;
+  --accent2: #fda4af;
+  --glow-a: 18%;
+  --glow-b: 14%;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0c0a09;
-    --surface: #1c1917;
-    --fg: #fafaf9;
-    --muted: #d6d3d1;
-    --line: #44403c;
-    --ui: #78716c;
-    --accent: #5eead4;
-    --on-accent: #042f2e;
-    color-scheme: dark;
-  }
+:root[data-theme="light"] {
+  --bg: #f8f8fc;
+  --surface: #ffffff;
+  --fg: #14142b;
+  --muted: #3f3f5c;
+  --line: #d9d9ea;
+  --ui: #6f6f90;
+  --accent: #3730a3;
+  --on-accent: #ffffff;
+  --accent2: #9f1239;
+  --glow-a: 12%;
+  --glow-b: 10%;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -37,12 +44,21 @@
   --color-ui: var(--ui);
   --color-accent: var(--accent);
   --color-on-accent: var(--on-accent);
+  --color-accent2: var(--accent2);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, SFMono-Regular, monospace;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  /* The header wraps to two rows on phones, so leave room for it. */
+  scroll-padding-top: 7.5rem;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
 }
 
 body {
@@ -55,6 +71,55 @@ body {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+/* Soft decorative color behind the hero. Purely visual (aria-hidden in markup). */
+.glow {
+  background:
+    radial-gradient(38rem 24rem at 12% 0%, color-mix(in oklab, var(--accent) var(--glow-a), transparent), transparent 70%),
+    radial-gradient(34rem 22rem at 92% 18%, color-mix(in oklab, var(--accent2) var(--glow-b), transparent), transparent 70%);
+}
+
+/* Gradient text for the big headline phrase. Both stops are AAA on the page background. */
+.gradient-text {
+  color: var(--accent);
+  background-image: linear-gradient(100deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Windows high-contrast mode removes backgrounds, so restore solid text. */
+@media (forced-colors: active) {
+  .gradient-text {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: CanvasText;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Entrance animation only for people who haven't asked for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .rise-2 {
+    animation-delay: 0.12s;
+  }
+  .rise-3 {
+    animation-delay: 0.24s;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

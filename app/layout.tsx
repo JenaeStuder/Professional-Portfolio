@@ -1,9 +1,16 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { site } from "@/lib/content";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono-face", display: "swap" });
+
+// Matches --bg in globals.css so mobile browser chrome blends with the page.
+export const viewport: Viewport = { themeColor: "#0d0d1f", colorScheme: "dark light" };
+
+const themeScript = `try{if(localStorage.getItem("theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}`;
 
 const isStaging = process.env.NEXT_PUBLIC_ENV === "staging";
 
@@ -23,7 +30,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${mono.variable}`}
+      // The inline script below sets data-theme before React hydrates.
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Apply a saved light-theme choice before first paint (avoids a dark flash). */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="font-sans antialiased">
         <a
           href="#main"

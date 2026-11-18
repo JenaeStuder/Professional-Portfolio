@@ -12,23 +12,24 @@ const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${enc(site.email)}&
 const outlook = `https://outlook.live.com/mail/0/deeplink/compose?to=${enc(site.email)}&subject=${enc(subject)}&body=${enc(body)}`;
 
 const secondary =
-  "rounded-md border border-ui px-4 py-2.5 font-semibold hover:bg-surface";
+  "rounded-lg border border-ui px-5 py-3 font-semibold hover:bg-bg";
 
 export function Contact() {
   return (
-    <Section id="contact" title="Get in touch">
-      <p className="max-w-2xl text-lg leading-relaxed text-muted">
+    <Section id="contact" eyebrow="05 / contact" title="Let's talk">
+      <div className="rounded-3xl border border-line bg-surface p-8 sm:p-12">
+      {/* <p className="max-w-2xl text-xl leading-relaxed text-muted">
         I&apos;m open to frontend engineering roles, especially accessibility-focused work. Send
         me a message at{" "}
         <a href={mailto} className="font-semibold text-fg underline underline-offset-4">
           {site.email}
         </a>
         .
-      </p>
-      <div className="mt-8 flex flex-wrap gap-3">
+      </p> */}
+      <div className="mt-4 flex flex-wrap gap-3">
         <a
           href={mailto}
-          className="rounded-md bg-accent px-5 py-2.5 font-semibold text-on-accent hover:opacity-90"
+          className="rounded-lg bg-accent px-6 py-3 font-semibold text-on-accent hover:opacity-90"
         >
           Email me
         </a>
@@ -52,6 +53,7 @@ export function Contact() {
           </a>
         </li>
       </ul>
+      </div>
     </Section>
   );
 }

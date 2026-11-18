@@ -20,7 +20,7 @@ export function CopyEmail({ email }: { email: string }) {
       <button
         type="button"
         onClick={copy}
-        className="rounded-md border border-ui px-4 py-2.5 font-semibold hover:bg-surface"
+        className="rounded-lg border border-ui px-5 py-3 font-semibold hover:bg-bg"
       >
         Copy address
       </button>

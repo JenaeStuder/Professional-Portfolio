@@ -27,5 +27,5 @@ npm run deploy   # builds to ./out and publishes it to the gh-pages branch
 
 ## Accessibility
 
-Skip link, landmarks, one visible focus style, `prefers-reduced-motion` and `prefers-color-scheme` support.
-Palette tokens in [app/globals.css](app/globals.css) meet WCAG AAA (7:1) text contrast in light and dark.
+Skip link, landmarks, one visible focus style and `prefers-reduced-motion` support.
+Dark is the default theme for everyone; light is an opt-in toggle in the header (saved in `localStorage`). Tokens for both themes live in [app/globals.css](app/globals.css) and meet WCAG AAA (7:1) text contrast.
