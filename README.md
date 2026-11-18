@@ -11,6 +11,7 @@ nvm use        # Node 24 (see .nvmrc)
 npm install
 npm run dev    # http://localhost:3000
 npm run lint && npm run typecheck
+npm run format          # Prettier (also sorts Tailwind classes); CI fails on unformatted code
 npm run build && npm start   # production build served from ./out
 ```
 
@@ -27,9 +28,9 @@ missing, the download buttons simply don't render.
 
 Deploys run through GitHub Actions ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)):
 
-| Branch | URL |
-|---|---|
-| `master` | https://jenaestuder.com (production) |
+| Branch    | URL                                                                  |
+| --------- | -------------------------------------------------------------------- |
+| `master`  | https://jenaestuder.com (production)                                 |
 | `develop` | https://jenaestuder.com/staging/ (preview, `noindex`, with a banner) |
 
 Both branches build on every push and ship together as one GitHub Pages site. Pull requests run

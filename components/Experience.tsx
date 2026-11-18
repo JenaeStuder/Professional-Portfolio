@@ -9,7 +9,10 @@ export function Experience() {
 
       <div className="mt-7 divide-y divide-line border-y border-line sm:mt-14">
         {story.sections.map((s) => (
-          <div key={s.title} className="grid gap-2 py-5 sm:gap-4 sm:py-10 md:grid-cols-[1fr_2fr] md:gap-12">
+          <div
+            key={s.title}
+            className="grid gap-2 py-5 sm:gap-4 sm:py-10 md:grid-cols-[1fr_2fr] md:gap-12"
+          >
             <h3 className="text-lg font-bold tracking-tight sm:text-xl">{s.title}</h3>
             <p className="max-w-2xl text-lg leading-relaxed text-muted">{s.body}</p>
           </div>

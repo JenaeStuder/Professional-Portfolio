@@ -10,25 +10,19 @@ export function Hero() {
           </p>
           <h1
             id="hero-heading"
-            className="rise rise-2 mt-4 text-[2.7rem] font-extrabold leading-[1.05] tracking-tight sm:mt-5 sm:text-6xl"
+            className="rise rise-2 mt-4 text-[2.7rem] leading-[1.05] font-extrabold tracking-tight sm:mt-5 sm:text-6xl"
           >
-            I build scalable <span className="gradient-text">Next.js</span> applications and
-            design systems.
+            I build scalable <span className="gradient-text">Next.js</span> applications and design
+            systems.
           </h1>
           <p className="rise rise-3 mt-4 max-w-2xl text-base leading-relaxed text-muted sm:mt-7 sm:text-xl">
             {intro.summary}
           </p>
           <div className="rise rise-3 mt-6 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
-            <a
-              href="#contact"
-              className="btn btn-primary"
-            >
+            <a href="#contact" className="btn btn-primary">
               Get in touch
             </a>
-            <a
-              href="#projects"
-              className="btn btn-outline"
-            >
+            <a href="#projects" className="btn btn-outline">
               See my work
             </a>
           </div>

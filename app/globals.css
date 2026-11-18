@@ -132,8 +132,16 @@ body {
    WCAG AAA (7:1) over the glow, measured from rendered pixels at 390/768/1280px wide. */
 .glow {
   background:
-    radial-gradient(38rem 24rem at 12% 0%, color-mix(in oklab, var(--accent) var(--glow-a), transparent), transparent 70%),
-    radial-gradient(34rem 22rem at 92% 18%, color-mix(in oklab, var(--accent2) var(--glow-b), transparent), transparent 70%);
+    radial-gradient(
+      38rem 24rem at 12% 0%,
+      color-mix(in oklab, var(--accent) var(--glow-a), transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      34rem 22rem at 92% 18%,
+      color-mix(in oklab, var(--accent2) var(--glow-b), transparent),
+      transparent 70%
+    );
 }
 
 /* Gradient text for the big headline phrase. Both stops are AAA on the page background. */

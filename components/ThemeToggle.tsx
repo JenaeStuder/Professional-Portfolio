@@ -35,11 +35,7 @@ export function ThemeToggle() {
   // The label names the action (what clicking will switch to), so no aria-pressed:
   // a changing label plus a pressed state would announce the state twice.
   return (
-    <button
-      type="button"
-      onClick={toggle}
-      className="btn btn-outline btn-sm order-2 lg:order-3"
-    >
+    <button type="button" onClick={toggle} className="btn btn-outline btn-sm order-2 lg:order-3">
       <svg
         aria-hidden="true"
         viewBox="0 0 24 24"

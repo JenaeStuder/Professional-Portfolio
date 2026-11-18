@@ -7,8 +7,7 @@ const subject = "Hello from your portfolio";
 const body = "Hi Jenae,\n\n";
 const enc = encodeURIComponent;
 
-export const mailtoUrl = () =>
-  `mailto:${emailAddress()}?subject=${enc(subject)}&body=${enc(body)}`;
+export const mailtoUrl = () => `mailto:${emailAddress()}?subject=${enc(subject)}&body=${enc(body)}`;
 export const gmailUrl = () =>
   `https://mail.google.com/mail/?view=cm&fs=1&to=${enc(emailAddress())}&su=${enc(subject)}&body=${enc(body)}`;
 export const outlookUrl = () =>

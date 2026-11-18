@@ -7,7 +7,7 @@ export function Skills() {
   return (
     <Section id="skills" eyebrow="04 / skills" title="What I work with">
       <h3 className="font-mono text-sm font-medium text-accent">Core toolkit</h3>
-      <ul className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-[1.35rem] font-bold leading-tight tracking-tight sm:text-3xl">
+      <ul className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-[1.35rem] leading-tight font-bold tracking-tight sm:text-3xl">
         {coreSkills.map((skill, i) => (
           <li key={skill}>
             {skill}

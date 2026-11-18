@@ -41,40 +41,22 @@ export const skills: SkillGroup[] = [
   },
   {
     label: "Accessibility & quality",
-    items: [
-      "WCAG 2.2 AAA",
-      "ARIA",
-      "axe DevTools",
-      "Lighthouse",
-      "WAVE",
-    ],
+    items: ["WCAG 2.2 AAA", "ARIA", "axe DevTools", "Lighthouse", "WAVE"],
   },
   {
     label: "Tooling & infrastructure",
-    items: [
-      "Claude Code",
-      "GitHub Actions",
-      "AWS (CDK, S3)",
-    ],
+    items: ["Claude Code", "GitHub Actions", "AWS (CDK, S3)"],
   },
   {
     label: "Practices",
-    items: [
-      "Design systems",
-      "Core Web Vitals",
-    ],
+    items: ["Design systems", "Core Web Vitals"],
   },
 ];
 
 // Selected projects: only work with public code, so every card links to GitHub.
 // Shown as large type at the top of the Skills section, and left out of the
 // category lists below so nothing appears twice. Each must match a skill item exactly.
-export const coreSkills = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Tailwind CSS",
-];
+export const coreSkills = ["TypeScript", "React", "Next.js", "Tailwind CSS"];
 
 type Project = {
   title: string;
@@ -88,7 +70,15 @@ export const projects: Project[] = [
     title: "Your next TBR",
     summary:
       "An interaction-rich app that I built to help me find new books to read. It asks a few questions about your taste, then turns Open Library data into personalized picks you can swipe through, save to shelves and share by URL. Runs entirely in the browser with no backend, with accessible keyboard and reduced-motion support.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack Query", "Zustand", "Motion", "Vitest"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Zustand",
+      "Motion",
+      "Vitest",
+    ],
     links: [
       {
         href: "https://jenaestuder.github.io/recommendations-nextjs/",
@@ -141,7 +131,6 @@ export const professionalWork: WorkItem[] = [
     tags: ["React", "Component architecture", "Design systems"],
   },
 ];
-
 
 export const facts = [
   { term: "Now", detail: "Lead frontend developer" },

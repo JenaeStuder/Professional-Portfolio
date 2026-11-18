@@ -1,0 +1,9 @@
+# Generated, vendored or binary: never formatted
+node_modules
+.next
+out
+public
+package-lock.json
+next-env.d.ts
+pnpm-lock.yaml
+.netlify
